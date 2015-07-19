@@ -8,7 +8,7 @@ error_reporting(!E_ALL);
 
 
 /******************************************************************************/
-define('CFG_VERSION',           '20150719-1819');
+define('CFG_VERSION',           '20150719-1927');
 define('CFG_PATH_IMG',          './img/');
 define('CFG_PATH_OUTPUT',       './output/');
 define('CFG_PATH_INTERNAL',     './internal/');
