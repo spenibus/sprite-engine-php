@@ -8,7 +8,7 @@ error_reporting(!E_ALL);
 
 
 /******************************************************************************/
-define('CFG_VERSION',           '20150719-1817');
+define('CFG_VERSION',           '20150719-1819');
 define('CFG_PATH_IMG',          './img/');
 define('CFG_PATH_OUTPUT',       './output/');
 define('CFG_PATH_INTERNAL',     './internal/');
@@ -96,9 +96,17 @@ function seSpriteBuild($size=0, $imgFiles, $rebuild=false) {
    if($rebuild) {
 
       $css = '';
-      $gridSize = ceil(sqrt(count($imgFiles)));
 
-      $img = imagecreatetruecolor($gridSize * $size, $gridSize * $size);
+      // number of images
+      $imgCount = count($imgFiles);
+
+      // grid width
+      $gridSizeW = ceil(sqrt($imgCount));
+
+      // grid height
+      $gridSizeH = ceil($imgCount/$gridSizeW);
+
+      $img = imagecreatetruecolor($gridSizeW * $size, $gridSizeH * $size);
 
       // save alpha
       imagesavealpha($img, true);
@@ -115,8 +123,8 @@ function seSpriteBuild($size=0, $imgFiles, $rebuild=false) {
 
       // insert images into grid
       $imgId = -1;
-      for($y=0; $y<$gridSize; ++$y) {
-         for($x=0; $x<$gridSize; ++$x) {
+      for($y=0; $y<$gridSizeH; ++$y) {
+         for($x=0; $x<$gridSizeW; ++$x) {
 
             $imgName = current($imgFiles);
             next($imgFiles);
