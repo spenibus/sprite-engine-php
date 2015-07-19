@@ -8,6 +8,7 @@ error_reporting(!E_ALL);
 
 
 /******************************************************************************/
+define('CFG_VERSION',           '20150719-1817');
 define('CFG_PATH_IMG',          './img/');
 define('CFG_PATH_OUTPUT',       './output/');
 define('CFG_PATH_INTERNAL',     './internal/');
@@ -200,6 +201,7 @@ spenibus.net
 https://github.com/spenibus/sprite-engine-php
 https://gitlab.com/spenibus/sprite-engine-php
 
+version: '.CFG_VERSION.'
 generated: '.gmdate('Y-m-d H:i:s O').'
 *******************************************************************************/';
 
