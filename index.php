@@ -273,7 +273,7 @@ exit('<!DOCTYPE html>
   </head>
   <body>
     <h1>sprite-engine</h1>
-    <br /><a href="spenibus.net">spenibus.net</a>
+    <br /><a href="http://spenibus.net">spenibus.net</a>
     <br /><a href="https://github.com/spenibus/sprite-engine-php">https://github.com/spenibus/sprite-engine-php</a>
     <br /><a href="https://gitlab.com/spenibus/sprite-engine-php">https://gitlab.com/spenibus/sprite-engine-php</a>
     <br />
